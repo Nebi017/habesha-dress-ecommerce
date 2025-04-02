@@ -1,9 +1,25 @@
 import React from 'react'
 
-const Home = () => {
+import Hero from '../components/Hero'
+
+import LatestCollection from '../components/LatestCollection'
+import BestSeller from '../components/BestSeller'
+import OurPolicy from '../components/OurPolicy'
+import NewsletterBox from '../components/NewsletterBox'
+
+function Home() {
   return (
-    <div>home</div>
+    <div>
+       
+      <Hero/>
+      <LatestCollection/>
+      <BestSeller/>
+      <OurPolicy/>
+      <NewsletterBox/>
+    </div>
   )
 }
+console.log("App component is rendering...");
+
 
 export default Home
