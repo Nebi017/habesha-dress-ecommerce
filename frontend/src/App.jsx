@@ -15,13 +15,14 @@ import Footer from './components/Footer'
 
 
 
+
 const App = () => {
   return (
     <div className='px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]' >
     <Navbar/>
     
     <Routes>
-<Route path="/" element={<Home/>}/>
+<Route path="/home" element={<Home/>}/>
 <Route path='/collection' element={< Collection/>}/>
 <Route path='/about' element={<About/>}/>
 <Route path='/contact' element={<Contact/>}/>
