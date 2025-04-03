@@ -1,4 +1,4 @@
-import React, { useState } from 'react';  // Add useState import
+import React, { useContext, useState } from 'react';  // Add useState import
 import logo from '../assets/log0.jpg';
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
@@ -7,10 +7,16 @@ import profile_icon from '../assets/profile_icon.png';
 import cart from '../assets/cart.png';
 import menuIcon from '../assets/menuIcon.png';
 import back from '../assets/back.png';
+import { ShopContext } from '../context/ShopContext';
+import { assets } from '../assets/assets';
 
 
 function Navbar() {
-    const [visible, setVisible] = useState(false); // Declare state
+    const [visible, setVisible] = useState(false);
+    const {setShowSearch}= useContext(ShopContext);
+    
+    
+    // Declare state
   return (
     <div className='flex items-center justify-between py-5 font-medium p-5'>
      <Link to='/'> <img src={logo} alt="Logo" /></Link>
@@ -33,7 +39,7 @@ function Navbar() {
         </NavLink>
       </ul>
       <div className='flex items-center gap-6'> {/* Fixed gap */}
-        <img src={searchIcon} className='w-7 cursor-pointer' alt="" />
+        <img onClick={()=>setShowSearch(true)} src={assets.search_icon} className='w-5 cursor-pointer' alt="" />
         <div className='group relative'>
             <img className='w-15' src={profile_icon} alt="" />
             <div className="group-hover:block hidden absolute dropdown-menu right-0 pt-4">
@@ -45,7 +51,7 @@ function Navbar() {
             </div>
         </div>
         <Link to='/cart' className="relative">
-            <img src={cart} alt="" className='w-10 min-w-5'/>
+            <img src={assets.cart_icon} alt="" className='w-5 min-w-5'/>
             <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded text-[8px]'>10</p>
         </Link>
         <img onClick={() => setVisible(true)} className='w-5 cursor-pointer sm:hidden' src={menuIcon} alt="" /> {/* Fixed cursor typo */}
