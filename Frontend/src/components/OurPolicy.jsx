@@ -1,7 +1,7 @@
 import React from 'react';
-import support from '../assets/support.jpg';
-import exchangeIcon from '../assets/exchangeIcon.png';
-import qalityIcon from '../assets/qalityIcon.png';
+import support from '../assets/support_img.png';
+import exchangeIcon from '../assets/exchange_icon.png';
+import qalityIcon from '../assets/quality_icon.png';
 
 function OurPolicy() {
   return (

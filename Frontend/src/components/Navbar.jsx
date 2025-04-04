@@ -14,6 +14,7 @@ import { assets } from '../assets/assets';
 function Navbar() {
     const [visible, setVisible] = useState(false);
     const {setShowSearch}= useContext(ShopContext);
+    const {getCartCount} = useContext(ShopContext)//
     
     
     // Declare state
@@ -52,7 +53,7 @@ function Navbar() {
         </div>
         <Link to='/cart' className="relative">
             <img src={assets.cart_icon} alt="" className='w-5 min-w-5'/>
-            <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded text-[8px]'>10</p>
+            <p className='absolute right-[-5px] bottom-[-5px] w-4 text-center leading-4 bg-black text-white aspect-square rounded text-[8px]'>{getCartCount()}</p>
         </Link>
         <img onClick={() => setVisible(true)} className='w-5 cursor-pointer sm:hidden' src={menuIcon} alt="" /> {/* Fixed cursor typo */}
         <div className={`absolute top-0 right-0 bottom-0 overflow-hidden bg-white transition-all ${visible ? 'w-full' : 'w-0'}`} >
