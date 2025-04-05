@@ -13,7 +13,6 @@ import Orders from './pages/Orders'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import SearchBar from './components/SearchBar'
-import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer} from 'react-toastify';
 
 
