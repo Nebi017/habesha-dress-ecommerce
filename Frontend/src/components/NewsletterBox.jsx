@@ -5,7 +5,7 @@ function NewsletterBox() {
       event.preventDefault();  
     }
   return (
-    <div className='text-center'>
+    <div className='text-center mt-30'>
       <p className='text:2xl font-meduim text-gray-800'>Subsribe now and get 20% off</p>
       <p className='text-gray-400 mt-3'> Subscribe now & get 20% off
       Join our community and enjoy an exclusive 20% discount on your first purchase</p>

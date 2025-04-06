@@ -3,6 +3,7 @@ import { ShopContext } from '../context/ShopContext';
 import Title from './Title'; // Import Title component
 import ProductItem from './ProductItem'; // Import ProductItem component
 
+
 function RelatedProducts({ category, subCategory }) {
     const { products } = useContext(ShopContext);
     const [related, setRelated] = useState([]);
@@ -28,6 +29,7 @@ function RelatedProducts({ category, subCategory }) {
                     <ProductItem key={index} id={item.id} name={item.name} price={item.price} image={item.image} />
                 ))}
             </div>
+            
         </div>
     );
 }

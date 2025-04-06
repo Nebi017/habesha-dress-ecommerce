@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { ShopContext } from '../context/ShopContext';
 import Title from './Title';
-import ProductItem from './ProductItem'; // ✅ Fix typo (was ProductItme)
+import ProductItem from './ProductItem'; 
+import line from '../assets/line.jpg'// ✅ Fix typo (was ProductItme)
 
 function LatestCollection() {
     const { products } = useContext(ShopContext);
@@ -20,7 +21,7 @@ function LatestCollection() {
             <div className='text-center py-8 text-3xl'>
                 <Title text1={'LATEST'} text2={'COLLECTIONS'} />
                 <p className='w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600'>
-                Elegant and authentic Habesha dresses crafted with premium cotton and intricate Tibeb embroidery. Perfect for cultural celebrations, weddings, and everyday elegance
+                    Elegant and authentic Habesha dresses crafted with premium cotton and intricate Tibeb embroidery. Perfect for cultural celebrations, weddings, and everyday elegance
                 </p>
             </div>
             <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-y-6 gap-4'>
@@ -31,6 +32,10 @@ function LatestCollection() {
                         ) : null
                     ))
                 }
+            </div>
+            {/* Line image from left to right of the screen */}
+            <div className='w-full mt-6'>
+                <img className='w-full' src={line} alt="Line" />
             </div>
         </div>
     );

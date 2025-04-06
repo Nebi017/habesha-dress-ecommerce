@@ -4,6 +4,7 @@ import React, { useEffect, useContext, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ShopContext } from '../context/ShopContext';
 import RelatedProducts from '../components/RelatedProducts';
+import line from '../assets/line.jpg';
 
 const Product = () => {
   const { productId } = useParams();
@@ -120,12 +121,16 @@ const Product = () => {
           <p>An e-commerce website is an online platform that facilitates the buying and selling of products or services over the internet. E-commerce websites have gained immense popularity due to their convenience, accessibility, and the global reach they offer.</p>
           <p>E-commerce websites typically display products or services along with detailed descriptions.</p>
         </div>
+
+        {/* Line Image below the description */}
+        <div className="mt-4">
+          <img  className='w-full'src={line} alt="Line" />
+        </div>
       </div>
 
       {/* Related Products */}
       <RelatedProducts category={productData.category} subCategory={productData.subCategory} />
     </div>
-    
   ) : (
     <div className="text-center text-gray-500 py-10">Loading...</div>
   );
