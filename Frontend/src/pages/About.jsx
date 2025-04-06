@@ -28,7 +28,7 @@ const About = () => {
             with the spirit of our communities.
           </p>
 
-          <b className="text-indigo-600 text-md font-bold mt-4">Our Products</b>
+          <b className="text-gray-800 text-md font-bold mt-4">Our Products</b>
           <p className="mb-4">
             We offer a curated selection of beautifully crafted garments, from elegant dresses and
             intricate shawls to traditional outfits for special occasions. Each piece is handmade by
