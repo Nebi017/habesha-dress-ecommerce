@@ -23,5 +23,5 @@ orderRouter.post("/userorders", authUser, userOrders);
 orderRouter.post("/list", adminAuth, allOrders);
 orderRouter.post("/status", adminAuth, updateStatus);
 // verify ppyment
-orderRouter.post('/verifyStripe, authUser, verifyStripe')
+orderRouter.post('/verifyStripe', authUser, verifyStripe)
 export default orderRouter;
